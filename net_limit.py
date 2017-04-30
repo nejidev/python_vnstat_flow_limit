@@ -23,12 +23,12 @@ class NetLimit:
 
 	def __net_up(self):
 		os.system("iptables -F")
-		self.intval = INTVAL_NORMAL
+		self.inteval = INTVAL_NORMAL
 
 	def __net_down(self):
 		os.system("iptables -A OUTPUT -p tcp --dport 80  -j REJECT")
 		os.system("iptables -A OUTPUT -p tcp --dport 443 -j REJECT")
-		self.intval = INTVAL_SLEEP
+		self.inteval = INTVAL_SLEEP
 
 	def __check_flow(self):
 		#经过测试 commands.getstatusoutput 返回结果不能使用 正则拆分
@@ -65,7 +65,7 @@ class NetLimit:
 	def __init__(self):
 		self.__net_up()
 		#设定每5分钟执行一次
-		self.intval = INTVAL_NORMAL
+		self.inteval = INTVAL_NORMAL
 
 	def run(self):
 		while True:
