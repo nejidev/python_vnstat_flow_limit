@@ -40,7 +40,7 @@
 	可以通过编辑NetLimit.py 中的 DAY_LIMIT_OF_MB 来设置每天的流量限制。
 	仅在 centOS 7.5 python 2.x 下测试 其它未做测试，如果有问题可以反馈给我。
 	
-##修改
+## 修改更新
 	添加 centOS 7.5 下配置方法
 	兼容 vnStat 1.15 返回的短日期的问题
 	增加 run.sh 解决非 en.US 语言下不能使用的问题
